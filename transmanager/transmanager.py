@@ -12,3 +12,13 @@ bp = Blueprint('transmanager', __name__)
 @bp.route('/')
 def index():
     return render_template('transmanager/index.html')
+
+
+@bp.route('/problemsolving')
+def problemsolving():
+    return render_template('transmanager/problem-solving.html')
+
+
+@bp.route('/concurrencycontrol')
+def concurrencycontrol():
+    return render_template('transmanager/concurrency-control.html')
