@@ -22,6 +22,12 @@ venv\Scripts\activate
 pip install Flask
 ```
 ### Run the application
+#### cmd
+```
+set FLASK_APP=flaskr
+set FLASK_ENV=development
+flask run
+```
 #### PowerShell
 ```
 $env:FLASK_APP = "flaskr"
