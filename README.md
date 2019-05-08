@@ -2,7 +2,7 @@
 A web application for transaction management.
 
 # Requirements
-Python 3.4 and newer
+Python 3.4 and newer.
 
 # Build Instructions
 
