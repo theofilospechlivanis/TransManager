@@ -45,7 +45,6 @@ python3 -m venv venv
 pip install Flask
 ```
 ### Run the application
-#### PowerShell
 ```
 export FLASK_APP=flaskr
 export FLASK_ENV=development
