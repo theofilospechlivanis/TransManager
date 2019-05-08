@@ -24,13 +24,13 @@ pip install Flask
 ### Run the application
 #### cmd
 ```
-set FLASK_APP=flaskr
+set FLASK_APP=transmanager
 set FLASK_ENV=development
 flask run
 ```
 #### PowerShell
 ```
-$env:FLASK_APP = "flaskr"
+$env:FLASK_APP = "transmanager"
 $env:FLASK_ENV = "development"
 flask run
 ```
@@ -52,7 +52,7 @@ pip install Flask
 ```
 ### Run the application
 ```
-export FLASK_APP=flaskr
+export FLASK_APP=transmanager
 export FLASK_ENV=development
 flask run
 ```
