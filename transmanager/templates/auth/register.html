@@ -1,15 +1,23 @@
 {% extends 'base.html' %}
 
 {% block header %}
-    <h1>{% block title %}Register{% endblock %}</h1>
+    <h1>{% block title %}Δημιουργία λογαριασμού{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-    <form method="post">
-        <label for="username">Username</label>
-        <input name="username" id="username" required>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required>
-        <input type="submit" value="Register">
-    </form>
+    <div id="go-back">&#8592; <span>Back</span></div>
+        
+    <div id="create-account">
+        <form action="#">
+            <input class="text" type="text" name="username" placeholder="Όνομα χρήστη" required>
+            <input class="text" type="text" name="email" placeholder="Email address" required>
+            <input class="text" type="password" name="password1" placeholder="Password" required>
+            <input class="text" type="password" name="password2" placeholder="Re-enter Password" required>
+            <input class="button" type="submit" value="Sign Up">
+        </form>
+    </div>
+
+    <div id="sign-container" data-aos="fade-up">
+        <a id="sign" href="sign-in.html">Already got an account?</a>
+    </div>
 {% endblock %}
