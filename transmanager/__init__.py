@@ -40,7 +40,13 @@ def create_app(test_config=None):
     from . import quiz
     app.register_blueprint(quiz.bp)
 
-    from . import help
-    app.register_blueprint(help.bp)
+    from . import help_pkg
+    app.register_blueprint(help_pkg.bp)
+
+    from . import profile
+    app.register_blueprint(profile.bp)
+
+    from . import nav
+    app.register_blueprint(nav.bp)
 
     return app
