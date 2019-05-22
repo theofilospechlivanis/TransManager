@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+
 {% block header %}
     <h1>{% block title %}Είσοδος{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-    <div id="go-back">&#8592; <span>Back</span></div>
+    <div id="go-back">&#8592; <a href="{{ url_for('transmanager.index') }}">Back</a></div>
     
     <div id="sign-in">
         <form action="#">
@@ -16,6 +20,6 @@
     </div>
 
     <div id="create-container">
-        <a id="create" href="#">Δημιουργία λογαριασμού</a>
+        <a id="create" href="{{ url_for('auth.register') }}">Δημιουργία λογαριασμού</a>
     </div>
 {% endblock %}
