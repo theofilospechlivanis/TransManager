@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="nav.css">
-     </head>
-    <body>
+{% extends 'base.html' %}
 
-        <span>&#10005;</span>
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+{% endblock %}
 
-        <div>
-            <h2>ΑΡΧΙΚΗ</h2>
-            <h2>ΕΛΕΓΧΟΣ ΤΑΥΤΟΧΡΟΝΙΣΜΟΥ</h2>
-            <h2>ΕΠΑΝΑΦΟΡΑ ΑΠΟ ΒΛΑΒΗ</h2>
-            <h2>QUIZ</h2>
-            <h2>ΒΟΗΘΕΙΑ</h2>
-            <h2>ΣΥΝΔΕΣΗ</h2>
-        </div>
+{% block header %}
+    <span>&#10005;</span>
 
-    </body>
-</html>
+    <h1>{% block title %}NAVIGATION{% endblock %}</h1>
+    
+    <div>
+        <h2><a href="{{ url_for('transmanager.index') }}">ΑΡΧΙΚΗ</a></h2>
+        <h2><a href="{{ url_for('transmanager.problemsolving') }}">ΕΠΙΛΥΣΗ ΠΡΟΒΛΗΜΑΤΩΝ</a></h2>
+        <h2><a href="{{ url_for('quiz.quiz') }}">QUIZ</a></h2>
+        <h2><a href="{{ url_for('help.help') }}">ΒΟΗΘΕΙΑ</a></h2>
+        <h2><a href="{{ url_for('profile.profile') }}">ΠΡΟΦΙΛ</a></h2>
+    </div>
+{% endblock %}
