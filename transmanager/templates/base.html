@@ -1,8 +1,8 @@
 <!doctype html>
 <title>{% block title %}{% endblock %} - TransManager</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% block style %}
+{% endblock %}
 <nav>
-    <h1>TransManager</h1>
     <ul>
         {% if g.user %}
             <li><span>{{ g.user['username'] }}</span></li>

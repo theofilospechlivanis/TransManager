@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="quiz1.css">
-    </head>
-    <body>
+{% extends 'base.html' %}
 
-        <div id="nav">&#9776;</div>
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz1.css') }}">
+{% endblock %}
 
-        <h1>QUIZ ΕΛΕΓΧΟΣ ΤΑΥΤΟΧΡΟΝΙΣΜΟΥ</h1>
-        
-        <div id="hr"></div>
+{% block header %}
+    <div id="nav">&#9776;</div>
 
-        <button>Είσοδος</button>
-        
-        <p>Παρακαλώ εισάγεται τα στοιχεία</p>
+    <h1>{% block title %}QUIZ ΕΛΕΓΧΟΣ ΤΑΥΤΟΧΡΟΝΙΣΜΟΥ{% endblock %}</h1>
+{% endblock %}
 
-        <form>
-            <input class="text" placeholder="Π.χ. X2(B) R2(B) X1(A) W2(B) R1(A) X3(C)">
-        </form>
+{% block content %}
+    <div id="hr"></div>
 
-    </body>
-</html>
+    <button>Είσοδος</button>
+    
+    <p>Παρακαλώ εισάγεται τα στοιχεία</p>
+
+    <form>
+        <input class="text" placeholder="Π.χ. X2(B) R2(B) X1(A) W2(B) R1(A) X3(C)">
+    </form>
+{% endblock %}
