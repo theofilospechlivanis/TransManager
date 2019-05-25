@@ -1,25 +1,26 @@
 {% extends 'base.html' %}
 
-{% block style %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 {% endblock %}
 
 {% block header %}
-    <h1>{% block title %}Είσοδος{% endblock %}</h1>
+<h1>{% block title %}Είσοδος{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-    <div id="go-back">&#8592; <a href="{{ url_for('transmanager.index') }}">Back</a></div>
-    
-    <div id="sign-in">
-        <form action="#">
-            <input class="text" type="text" name="username" placeholder="Όνομα χρήστη" required>
-            <input class="text" type="password" name="password" placeholder="Κωδικός πρόσβασης" required>
-            <input class="button" type="submit" value="Sign In">		
-        </form>
-    </div>
+<div id="go-back">&#8592; <a href="{{ url_for('transmanager.index') }}">Back</a></div>
 
-    <div id="create-container">
-        <a id="create" href="{{ url_for('auth.register') }}">Δημιουργία λογαριασμού</a>
-    </div>
+<div id="sign-in">
+    <form action="#">
+        <input class="text" type="text" name="username" placeholder="Όνομα χρήστη" required>
+        <input class="text" type="password" name="password" placeholder="Κωδικός πρόσβασης" required>
+        <input class="button" type="submit" value="Sign In">
+    </form>
+</div>
+
+<div id="create-container">
+    <a id="create" href="{{ url_for('auth.register') }}">Δημιουργία λογαριασμού</a>
+</div>
 {% endblock %}

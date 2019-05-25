@@ -1,29 +1,31 @@
 {% extends 'base.html' %}
 
-{% block style %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='help.css') }}">
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/help.css') }}">
 {% endblock %}
-{% block header %}
-    <div id="nav">&#9776;</div>
 
-    <div id="title">
-        <h1>{% block title %}ΒΟΗΘΕΙΑ{% endblock %}</h1>
-        <div id="hr"></div>
-    </div>
+{% block header %}
+<div id="nav">&#9776;</div>
+
+<div id="title">
+    <h1>{% block title %}ΒΟΗΘΕΙΑ{% endblock %}</h1>
+    <div id="hr"></div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div id="menu">
+<div id="menu">
 
-        <h2>Πώς λειτουργεί ο Έλεγχος Ταυτοχρονισμού &#9662;</h2>
-        <p>A paragraph</p>
+    <h2>Πώς λειτουργεί ο Έλεγχος Ταυτοχρονισμού &#9662;</h2>
+    <p>A paragraph</p>
 
-        <h2>Πώς λειτουργεί η Επαναφορά από βλάβη &#9662;</h2>
-        <p>A paragraph</p>
+    <h2>Πώς λειτουργεί η Επαναφορά από βλάβη &#9662;</h2>
+    <p>A paragraph</p>
 
 
-        <h2>Πώς λειτουργεί το Quiz &#9662;</h2>
-        <p>A paragraph</p>
+    <h2>Πώς λειτουργεί το Quiz &#9662;</h2>
+    <p>A paragraph</p>
 
-    </div>
+</div>
 {% endblock %}

@@ -1,24 +1,38 @@
-<!doctype html>
-<title>{% block title %}{% endblock %} - TransManager</title>
-{% block style %}
-{% endblock %}
-<nav>
-    <ul>
-        {% if g.user %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block head %}
+    <title>{% block title %}{% endblock %} - TransManager</title>
+    {% endblock %}
+</head>
+
+<body>
+    <nav>
+        <ul>
+            {% if g.user %}
             <li><span>{{ g.user['username'] }}</span></li>
             <li><a href="{{ url_for('auth.logout') }}">Log Out</a></li>
-        {% else %}
+            {% else %}
             <li><a href="{{ url_for('auth.register') }}">Register</a></li>
             <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
-        {% endif %}
-    </ul>
-</nav>
-<section class="content">
-    <header>
-        {% block header %}{% endblock %}
-    </header>
-    {% for message in get_flashed_messages() %}
+            {% endif %}
+        </ul>
+    </nav>
+    <section class="content">
+        <header>
+            {% block header %}{% endblock %}
+        </header>
+        {% for message in get_flashed_messages() %}
         <div class="flash">{{ message }}</div>
-    {% endfor %}
-    {% block content %}{% endblock %}
-</section>
+        {% endfor %}
+        {% block content %}{% endblock %}
+    </section>
+    <section class="footer">
+        {% block footer %}
+        &copy; Copyright 2019 by TransManager.
+        {% endblock %}
+    </section>
+</body>
+
+</html>
