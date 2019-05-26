@@ -1,27 +1,123 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../../static/quiz1.css">
+        <script src="../../static/quiz1.js"></script> 
+    </head>
+    <body>
 
-{% block head %}
-{{ super() }}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/quiz1.css') }}">
-<script type=text/javascript src="{{ url_for('static', filename='js/quiz1.js') }}"></script>
-{% endblock %}
+        <!-- Start -->
 
-{% block header %}
-<div id="nav">&#9776;</div>
+        <div id="nav">&#9776;</div>
 
-<h1>{% block title %}QUIZ ΕΛΕΓΧΟΣ ΤΑΥΤΟΧΡΟΝΙΣΜΟΥ{% endblock %}</h1>
-{% endblock %}
+        <h1>QUIZ ΕΛΕΓΧΟΣ ΤΑΥΤΟΧΡΟΝΙΣΜΟΥ</h1>
+        
+        <div id="hr"></div>
 
-{% block content %}
-<div id="hr"></div>
+        <button id="login">Είσοδος</button>
+        
+        <p id="header">Παρακαλώ εισάγεται τα στοιχεία</p>
 
-<button>Είσοδος</button>
+        <input id="skr" class="text" placeholder="Π.χ. X2(B) R2(B) X1(A) W2(B) R1(A) X3(C)">
 
-<p>Παρακαλώ εισάγεται τα στοιχεία</p>
+        <button id="submit" onclick="submit()">Enter</button>
 
-<form id="form-timetable" onsubmit="getResults();return false;">
-    <input type="text" name="timetable" placeholder="Π.χ. X2(B) R2(B) X1(A) W2(B) R1(A) X3(C)">
-</form>
+        <!-- Page 1 -->
 
-<p id="results"></p>
-{% endblock %}
+        <p id="header-page1" class="hidden">Είναι σειριοποιήσιμο το χρονοπρόγραμμα;</p>
+
+        <div id="yesno" class="hidden">
+            <label class="labl">
+                <input type="radio" name="radioname" value="yes"/>
+                <div>Ναι</div>
+            </label>
+            <label class="labl">
+                <input type="radio" name="radioname" value="no"/>
+                <div>Όχι</div>
+            </label>
+        </div>
+
+        <!-- Page 2 -->
+
+        <p id="header-page2" class="hidden">Είναι σειριοποιήσιμο το χρονοπρόγραμμα;</p>
+
+        <form id="table" class="hidden">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>1</th>
+                        <th>2</th> 
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>10</th>
+                    </tr>
+                    <tr id="first-row">
+                        <td>T1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>T2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>T3</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>T4</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+
+        <div id="page" class="hidden">
+            <button id="previous" onclick="previous()">Προηγούμενο</button>
+            <div class="current"></div>
+            <div></div>
+            <div></div>
+            <button id="next" onclick="next()">Επόμενο</button>
+        </div>
+
+    </body>
+</html>
