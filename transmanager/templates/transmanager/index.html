@@ -1,133 +1,185 @@
-﻿{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap" rel="stylesheet">  
+    </head>
+    <body>
 
-{% block title %}ΑΡΧΙΚΗ{% endblock %}
+        <div id="home">
+            <img id="logo" src="../icons/logo.png" alt="TransManager logo">
 
-{% block head %}
-{{ super() }}
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+            <nav>
+                <a href="">Αρχική</a>
+                <a href="">Έλεγχος Ταυτοχρονισμού</a>
+                <a href="">Επαναφορά από βλάβη</a>
+                <a href="">Quiz</a>
+                <a href="">Βοήθεια</a>
+            </nav>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
-{% endblock %}
+            <button id="login">Είσοδος</button>
 
-{% block content %}
-<!--	<body style"position: relative; min-height:100%; top: 0px;">	-->
-<div class="w3-container top" style="color: white; font-size: 100px;"></div>
+            <h1>Trans<span>Manager</span></h1>
 
-<head style="marging-top: 100px;"></head>
-<div class="topnav">
-	<a href="{{ url_for('transmanager.index') }}">ΑΡΧΙΚΗ</a>
-	<a href="{{ url_for('transmanager.problemsolving') }}">ΕΠΙΛΥΣΗ ΠΡΟΒΛΗΜΑΤΩΝ</a>
-	<a href="{{ url_for('quiz.quiz') }}">QUIZ</a>
-	<a href="{{ url_for('help.help') }}">ΒΟΗΘΕΙΑ</a>
-	<a href="{{ url_for('profile.profile') }}">ΠΡΟΦΙΛ</a>
-</div>
-<div class="main">
+            <div>
+                <p>
+                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
+                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
+                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
+                </p>
+            </div>
 
-	<div class="row" style="margin-top: 5%; height: 40%;">
-		<div style="width: 33%; background-color:;">
-			<p>asddd</p>
-			<p>γραφω κατι σημνατικο <br> εδω περα</p>
-			<p>asddd</p>
-			<p>asddd</p>
-		</div>
-		<div style="width: 33%;">
-			<p>asddd</p>
-			<p>γραφω κατι σημνατικο <br> εδω περα</p>
-			<p>asddd</p>
-			<p>asddd</p>
-		</div>
-		<div style="width: 33%;">
-			<p>asddd</p>
-			<p>γραφω κατι σημνατικο <br> εδω περα</p>
-			<p>asddd</p>
-			<p>asddd</p>
-		</div>
-	</div>
+            <img src="../icons/background.png" alt="">
 
-	<p style="padding-left: 25%; font-size: 30px;">Leaderboards</p>
-	<div class="boxrow" style="margin-top: 10px; height: 20px;">
-		<div class="column" style="width: 10%;">ID</div>
-		<div class="column">Όνομα</div>
-		<div class="column">Ελεγχος</div>
-		<div class="column" style="">Επαναφορα</div>
-	</div>
+        </div>
 
+        <div id="menu">
 
-	<div class="boxrow" style="height: 24px">
-		<div class="boxcolumn" style="width: 10%;">1</div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-	</div>
+            <div>
+                <img src="" alt="">
 
-	<div class="boxrow" style="height: 24px;">
-		<div class="boxcolumn" style="width: 10%">2</div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-	</div>
+                <h2>Έλεγχος Ταυτοχρονισμού</h2>
 
-	<div class="boxrow" style="height: 24px;">
-		<div class="boxcolumn" style="width: 10%">3</div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-	</div>
+                <p>
+                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
+                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
+                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+                </p>
+            </div>
 
-	<div class="boxrow" style="height: 24px;">
-		<div class="boxcolumn" style="width: 10%">4</div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-	</div>
+            <div>
+                <img src="quiz2.png" alt="">
 
-	<div class="boxrow" style="height: 24px;">
-		<div class="boxcolumn" style="width: 10%">5</div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-	</div>
+                <h2>Επαναφορά από βλάβη</h2>
 
-	<div class="boxrow" style="height: 24px;">
-		<div class="boxcolumn" style="width: 10%">2</div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-	</div>
+                <p>
+                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
+                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
+                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+                </p>
+            </div>
 
-	<div class="boxrow" style="height: 24px;">
-		<div class="boxcolumn" style="width: 10%">6</div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-	</div>
+            <div>
+                <img src="" alt="">
 
-	<div class="boxrow" style="height: 24px;">
-		<div class="boxcolumn" style="width: 10%">7</div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-	</div>
+                <h2>Quiz</h2>
 
-	<div class="boxrow" style="height: 24px;">
-		<div class="boxcolumn" style="width: 10%">8</div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-	</div>
+                <p>
+                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
+                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
+                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+                </p>
+            </div>
 
-	<div class="boxrow" style="height: 24px;">
-		<div class="boxcolumn" style="width: 10%">9</div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-		<div class="boxcolumn"></div>
-	</div>
+        </div>
 
-</div>
-<p style="text-align: center; text-decoration: overline; color:white; height: 50px;">
-	Copy Right <i class="fa fa-copyright"></i> 2019
-</p>
-{% endblock %}
+        <div id="leaderboards">
+            <h3>Leaderboards</h3>
+
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Όνομα</th>
+                    <th>Έλεγχος Ταυτοχρονισμού</th>
+                    <th>Επαναφορά από βλάβη</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Χρήστης</td>
+                    <td>10234</td>
+                    <td>10234</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Χρήστης</td>
+                    <td>10234</td>
+                    <td>10234</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Χρήστης</td>
+                    <td>10234</td>
+                    <td>10234</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Χρήστης</td>
+                    <td>10234</td>
+                    <td>10234</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Χρήστης</td>
+                    <td>10234</td>
+                    <td>10234</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Χρήστης</td>
+                    <td>10234</td>
+                    <td>10234</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Χρήστης</td>
+                    <td>10234</td>
+                    <td>10234</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Χρήστης</td>
+                    <td>10234</td>
+                    <td>10234</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Χρήστης</td>
+                    <td>10234</td>
+                    <td>10234</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Χρήστης</td>
+                    <td>10234</td>
+                    <td>10234</td>
+                </tr>
+            </table>
+        </div>
+
+        <footer>
+            <div id="footer-nav">
+                <ul>
+                    <li><a href="">Αρχική</a></li>
+                    <li><a href="">Έλεγχος Ταυτοχρονισμού</a></li>
+                    <li><a href="">Επαναφορά από βλάβη</a></li>
+                    <li><a href="">Quiz</a></li>
+                    <li><a href="">Σύνδεση</a></li>
+                    <li><a href="">Βοήθεια</a></li>
+                </ul>
+
+                <div id="quiz">
+                    <p>Quiz</p>
+                    <div></div>
+                    <ul>
+                        <li><a href="">Έλεγχος Ταυτοχρονισμού</a></li>
+                        <li><a href="">Επαναφορά από βλάβη</a></li>
+                    </ul>
+                </div>
+
+                <div id="help">
+                    <p>Βοήθεια</p>
+                    <div></div>
+                    <ul>
+                        <li><a href="">Βοήθεια 1</a></li>
+                        <li><a href="">Βοήθεια 2</a></li>
+                        <li><a href="">Βοήθεια 3</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="hr"></div>
+            <p>TransManager 2019 | Copyright©</p>
+        </footer>
+
+    </body>
+</html>

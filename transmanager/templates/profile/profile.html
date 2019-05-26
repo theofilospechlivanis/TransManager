@@ -1,48 +1,45 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../../static/profile.css">
+    </head>
+    <body>
 
-{% block head %}
-{{ super() }}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
-{% endblock %}
+        <div id="nav">&#9776;</div>
 
-{% block header %}
-<h1>{% block title %}PROFILE{% endblock %}</h1>
-{% endblock %}
+        <img>
 
-{% block content %}
-<div id="nav">&#9776;</div>
+        <div id="container">
+            <div id="info">
+                <h2>Στοιχεία Χρήστη</h2>
 
-<img>
+                <div>
+                    <h3>ΟΝΟΜΑ</h3>
+                    <h4>ΟΝΟΜΑ</h4>
+                </div>
 
-<div id="container">
-    <div id="info">
-        <h2>Στοιχεία Χρήστη</h2>
+                <div></div>
 
-        <div>
-            <h3>ΟΝΟΜΑ</h3>
-            <h4>ΟΝΟΜΑ</h4>
+                <div>
+                    <h3>EMAIL</h3>
+                    <h4>EMAIL</h4>
+                </div>
+
+                <div></div>
+
+                <div>
+                    <h3>ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ</h3>
+                    <h4>ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ</h4>
+                </div>
+
+                <div></div>
+
+                <div>
+                    <h3>ΚΩΔΙΚΟΣ</h3>
+                    <h4>ΚΩΔΙΚΟΣ</h4>
+                </div>
+            </div>
         </div>
 
-        <div></div>
-
-        <div>
-            <h3>EMAIL</h3>
-            <h4>EMAIL</h4>
-        </div>
-
-        <div></div>
-
-        <div>
-            <h3>AWD</h3>
-            <h4>AWD</h4>
-        </div>
-
-        <div></div>
-
-        <div>
-            <h3>ΚΩΔΙΚΟΣ</h3>
-            <h4>ΚΩΔΙΚΟΣ</h4>
-        </div>
-    </div>
-</div>
-{% endblock %}
+    </body>
+</html>
