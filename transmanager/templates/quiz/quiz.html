@@ -1,18 +1,19 @@
 {% extends 'base.html' %}
 
-{% block style %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css') }}">
 {% endblock %}
 
 {% block header %}
-    <h1>{% block title %}QUIZ{% endblock %}</h1>
+<h1>{% block title %}QUIZ{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-    <div id="hr"></div>
+<div id="hr"></div>
 
-    <div id="menu">
-        <h2><a href="{{ url_for('quiz.quiz1') }}">ΕΛΕΓΧΟΣ ΤΑΥΤΟΧΡΟΝΙΣΜΟΥ</a></h2>
-        <h2><a href="{{ url_for('quiz.quiz2') }}">ΕΠΑΝΑΦΟΡΑ ΑΠΟ ΒΛΑΒΗ</a></h2>
-    </div>
+<div id="menu">
+    <h2><a href="{{ url_for('quiz.quiz1') }}">ΕΛΕΓΧΟΣ ΤΑΥΤΟΧΡΟΝΙΣΜΟΥ</a></h2>
+    <h2><a href="{{ url_for('quiz.quiz2') }}">ΕΠΑΝΑΦΟΡΑ ΑΠΟ ΒΛΑΒΗ</a></h2>
+</div>
 {% endblock %}

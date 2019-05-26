@@ -1,19 +1,20 @@
 {% extends 'base.html' %}
 
-{% block style %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
 {% endblock %}
 
 {% block header %}
-    <span>&#10005;</span>
+<span>&#10005;</span>
 
-    <h1>{% block title %}NAVIGATION{% endblock %}</h1>
-    
-    <div>
-        <h2><a href="{{ url_for('transmanager.index') }}">ΑΡΧΙΚΗ</a></h2>
-        <h2><a href="{{ url_for('transmanager.problemsolving') }}">ΕΠΙΛΥΣΗ ΠΡΟΒΛΗΜΑΤΩΝ</a></h2>
-        <h2><a href="{{ url_for('quiz.quiz') }}">QUIZ</a></h2>
-        <h2><a href="{{ url_for('help.help') }}">ΒΟΗΘΕΙΑ</a></h2>
-        <h2><a href="{{ url_for('profile.profile') }}">ΠΡΟΦΙΛ</a></h2>
-    </div>
+<h1>{% block title %}NAVIGATION{% endblock %}</h1>
+
+<div>
+    <h2><a href="{{ url_for('transmanager.index') }}">ΑΡΧΙΚΗ</a></h2>
+    <h2><a href="{{ url_for('transmanager.problemsolving') }}">ΕΠΙΛΥΣΗ ΠΡΟΒΛΗΜΑΤΩΝ</a></h2>
+    <h2><a href="{{ url_for('quiz.quiz') }}">QUIZ</a></h2>
+    <h2><a href="{{ url_for('help.help') }}">ΒΟΗΘΕΙΑ</a></h2>
+    <h2><a href="{{ url_for('profile.profile') }}">ΠΡΟΦΙΛ</a></h2>
+</div>
 {% endblock %}

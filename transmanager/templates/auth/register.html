@@ -1,27 +1,28 @@
 {% extends 'base.html' %}
 
-{% block style %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 {% endblock %}
 
 {% block header %}
-    <h1>{% block title %}Δημιουργία λογαριασμού{% endblock %}</h1>
+<h1>{% block title %}Δημιουργία λογαριασμού{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-    <div id="go-back">&#8592; <a href="{{ url_for('transmanager.index') }}">Back</a></div>
-        
-    <div id="create-account">
-        <form action="#">
-            <input class="text" type="text" name="username" placeholder="Όνομα χρήστη" required>
-            <input class="text" type="text" name="email" placeholder="Email address" required>
-            <input class="text" type="password" name="password1" placeholder="Password" required>
-            <input class="text" type="password" name="password2" placeholder="Re-enter Password" required>
-            <input class="button" type="submit" value="Sign Up">
-        </form>
-    </div>
+<div id="go-back">&#8592; <a href="{{ url_for('transmanager.index') }}">Back</a></div>
 
-    <div id="sign-container" data-aos="fade-up">
-        <a id="sign" href="{{ url_for('auth.login') }}">Already got an account?</a>
-    </div>
+<div id="create-account">
+    <form action="#">
+        <input class="text" type="text" name="username" placeholder="Όνομα χρήστη" required>
+        <input class="text" type="text" name="email" placeholder="Email address" required>
+        <input class="text" type="password" name="password1" placeholder="Password" required>
+        <input class="text" type="password" name="password2" placeholder="Re-enter Password" required>
+        <input class="button" type="submit" value="Sign Up">
+    </form>
+</div>
+
+<div id="sign-container" data-aos="fade-up">
+    <a id="sign" href="{{ url_for('auth.login') }}">Already got an account?</a>
+</div>
 {% endblock %}
