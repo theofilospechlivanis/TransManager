@@ -1,185 +1,188 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap" rel="stylesheet">  
-    </head>
-    <body>
 
-        <div id="home">
-            <img id="logo" src="../icons/logo.png" alt="TransManager logo">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap">
+</head>
 
-            <nav>
-                <a href="">Αρχική</a>
-                <a href="">Έλεγχος Ταυτοχρονισμού</a>
-                <a href="">Επαναφορά από βλάβη</a>
-                <a href="">Quiz</a>
-                <a href="">Βοήθεια</a>
-            </nav>
+<body>
 
-            <button id="login">Είσοδος</button>
+    <div id="home">
+        <img id="logo" src="../icons/logo.png" alt="TransManager logo">
 
-            <h1>Trans<span>Manager</span></h1>
+        <nav>
+            <a href="{{ url_for('transmanager.index') }}">Αρχική</a>
+            <a href="{{ url_for('transmanager.concurrencycontrol') }}">Έλεγχος Ταυτοχρονισμού</a>
+            <a href="{{ url_for('transmanager.aries') }}">Επαναφορά από βλάβη</a>
+            <a href="{{ url_for('quiz.quiz') }}">Quiz</a>
+            <a href="{{ url_for('help.help') }}">Βοήθεια</a>
+        </nav>
 
-            <div>
-                <p>
-                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
-                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
-                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
-                </p>
-            </div>
+        <button id="login">Είσοδος</button>
 
-            <img src="../icons/background.png" alt="">
+        <h1>Trans<span>Manager</span></h1>
 
+        <div>
+            <p>
+                Μήνυμα εισαγωγής Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+                Μήνυμα εισαγωγής Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+                Μήνυμα εισαγωγής Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+            </p>
         </div>
 
-        <div id="menu">
+        <img src="../icons/background.png" alt="">
 
-            <div>
-                <img src="" alt="">
+    </div>
 
-                <h2>Έλεγχος Ταυτοχρονισμού</h2>
+    <div id="menu">
 
-                <p>
-                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
-                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
-                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής
-                </p>
-            </div>
+        <div>
+            <img src="" alt="">
 
-            <div>
-                <img src="quiz2.png" alt="">
+            <h2>Έλεγχος Ταυτοχρονισμού</h2>
 
-                <h2>Επαναφορά από βλάβη</h2>
-
-                <p>
-                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
-                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
-                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής
-                </p>
-            </div>
-
-            <div>
-                <img src="" alt="">
-
-                <h2>Quiz</h2>
-
-                <p>
-                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
-                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής 
-                    Μήνυμα εισαγωγής Μήνυμα εισαγωγής
-                </p>
-            </div>
-
+            <p>
+                Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+                Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+                Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+            </p>
         </div>
 
-        <div id="leaderboards">
-            <h3>Leaderboards</h3>
+        <div>
+            <img src="quiz2.png" alt="">
 
-            <table>
-                <tr>
-                    <th></th>
-                    <th>Όνομα</th>
-                    <th>Έλεγχος Ταυτοχρονισμού</th>
-                    <th>Επαναφορά από βλάβη</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Χρήστης</td>
-                    <td>10234</td>
-                    <td>10234</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Χρήστης</td>
-                    <td>10234</td>
-                    <td>10234</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Χρήστης</td>
-                    <td>10234</td>
-                    <td>10234</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Χρήστης</td>
-                    <td>10234</td>
-                    <td>10234</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Χρήστης</td>
-                    <td>10234</td>
-                    <td>10234</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Χρήστης</td>
-                    <td>10234</td>
-                    <td>10234</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Χρήστης</td>
-                    <td>10234</td>
-                    <td>10234</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Χρήστης</td>
-                    <td>10234</td>
-                    <td>10234</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>Χρήστης</td>
-                    <td>10234</td>
-                    <td>10234</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>Χρήστης</td>
-                    <td>10234</td>
-                    <td>10234</td>
-                </tr>
-            </table>
+            <h2>Επαναφορά από βλάβη</h2>
+
+            <p>
+                Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+                Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+                Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+            </p>
         </div>
 
-        <footer>
-            <div id="footer-nav">
+        <div>
+            <img src="" alt="">
+
+            <h2>Quiz</h2>
+
+            <p>
+                Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+                Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+                Μήνυμα εισαγωγής Μήνυμα εισαγωγής
+            </p>
+        </div>
+
+    </div>
+
+    <div id="leaderboards">
+        <h3>Leaderboards</h3>
+
+        <table>
+            <tr>
+                <th></th>
+                <th>Όνομα</th>
+                <th>Έλεγχος Ταυτοχρονισμού</th>
+                <th>Επαναφορά από βλάβη</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Χρήστης</td>
+                <td>10234</td>
+                <td>10234</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Χρήστης</td>
+                <td>10234</td>
+                <td>10234</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Χρήστης</td>
+                <td>10234</td>
+                <td>10234</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Χρήστης</td>
+                <td>10234</td>
+                <td>10234</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Χρήστης</td>
+                <td>10234</td>
+                <td>10234</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Χρήστης</td>
+                <td>10234</td>
+                <td>10234</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Χρήστης</td>
+                <td>10234</td>
+                <td>10234</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Χρήστης</td>
+                <td>10234</td>
+                <td>10234</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Χρήστης</td>
+                <td>10234</td>
+                <td>10234</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Χρήστης</td>
+                <td>10234</td>
+                <td>10234</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <div id="footer-nav">
+            <ul>
+                <li><a href="">Αρχική</a></li>
+                <li><a href="">Έλεγχος Ταυτοχρονισμού</a></li>
+                <li><a href="">Επαναφορά από βλάβη</a></li>
+                <li><a href="">Quiz</a></li>
+                <li><a href="">Σύνδεση</a></li>
+                <li><a href="">Βοήθεια</a></li>
+            </ul>
+
+            <div id="quiz">
+                <p>Quiz</p>
+                <div></div>
                 <ul>
-                    <li><a href="">Αρχική</a></li>
                     <li><a href="">Έλεγχος Ταυτοχρονισμού</a></li>
                     <li><a href="">Επαναφορά από βλάβη</a></li>
-                    <li><a href="">Quiz</a></li>
-                    <li><a href="">Σύνδεση</a></li>
-                    <li><a href="">Βοήθεια</a></li>
                 </ul>
-
-                <div id="quiz">
-                    <p>Quiz</p>
-                    <div></div>
-                    <ul>
-                        <li><a href="">Έλεγχος Ταυτοχρονισμού</a></li>
-                        <li><a href="">Επαναφορά από βλάβη</a></li>
-                    </ul>
-                </div>
-
-                <div id="help">
-                    <p>Βοήθεια</p>
-                    <div></div>
-                    <ul>
-                        <li><a href="">Βοήθεια 1</a></li>
-                        <li><a href="">Βοήθεια 2</a></li>
-                        <li><a href="">Βοήθεια 3</a></li>
-                    </ul>
-                </div>
             </div>
 
-            <div id="hr"></div>
-            <p>TransManager 2019 | Copyright©</p>
-        </footer>
+            <div id="help">
+                <p>Βοήθεια</p>
+                <div></div>
+                <ul>
+                    <li><a href="">Βοήθεια 1</a></li>
+                    <li><a href="">Βοήθεια 2</a></li>
+                    <li><a href="">Βοήθεια 3</a></li>
+                </ul>
+            </div>
+        </div>
 
-    </body>
+        <div id="hr"></div>
+        <p>TransManager 2019 | Copyright©</p>
+    </footer>
+
+</body>
+
 </html>

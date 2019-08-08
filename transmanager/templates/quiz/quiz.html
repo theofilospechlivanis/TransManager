@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="../../static/quiz.css">
-    </head>
-    <body>
 
-        <span><</span>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css') }}">
+</head>
 
-        <h1>QUIZ</h1>
-        <div id="hr"></div>
+<body>
 
-        <div id="menu">
-            <h2>ΕΛΕΓΧΟΣ ΤΑΥΤΟΧΡΟΝΙΣΜΟΥ</h2>
-            <h2>ΕΠΑΝΑΦΟΡΑ ΑΠΟ ΒΛΑΒΗ</h2>
-        </div>
-    </body>
+    <span></span>
+
+    <h1>QUIZ</h1>
+    <div id="hr"></div>
+
+    <div id="menu">
+        <h2><a href="{{ url_for('quiz.quiz1') }}">ΕΛΕΓΧΟΣ ΤΑΥΤΟΧΡΟΝΙΣΜΟΥ</a></h2>
+        <h2><a href="{{ url_for('quiz.quiz2') }}">ΕΠΑΝΑΦΟΡΑ ΑΠΟ ΒΛΑΒΗ</a></h2>
+    </div>
+</body>
+
 </html>

@@ -1,123 +1,126 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="../../static/quiz1.css">
-        <script src="../../static/quiz1.js"></script> 
-    </head>
-    <body>
 
-        <!-- Start -->
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz1.css') }}">
+    <script type=text/javascript src="{{ url_for('static', filename='js/quiz1.js') }}"></script>
+</head>
 
-        <div id="nav">&#9776;</div>
+<body>
 
-        <h1>QUIZ ΕΛΕΓΧΟΣ ΤΑΥΤΟΧΡΟΝΙΣΜΟΥ</h1>
-        
-        <div id="hr"></div>
+    <!-- Start -->
 
-        <button id="login">Είσοδος</button>
-        
-        <p id="header">Παρακαλώ εισάγεται τα στοιχεία</p>
+    <div id="nav">&#9776;</div>
 
-        <input id="skr" class="text" placeholder="Π.χ. X2(B) R2(B) X1(A) W2(B) R1(A) X3(C)">
+    <h1>QUIZ ΕΛΕΓΧΟΣ ΤΑΥΤΟΧΡΟΝΙΣΜΟΥ</h1>
 
-        <button id="submit" onclick="submit()">Enter</button>
+    <div id="hr"></div>
 
-        <!-- Page 1 -->
+    <button id="login">Είσοδος</button>
 
-        <p id="header-page1" class="hidden">Είναι σειριοποιήσιμο το χρονοπρόγραμμα;</p>
+    <p id="header">Παρακαλώ εισάγεται τα στοιχεία</p>
 
-        <div id="yesno" class="hidden">
-            <label class="labl">
-                <input type="radio" name="radioname" value="yes"/>
-                <div>Ναι</div>
-            </label>
-            <label class="labl">
-                <input type="radio" name="radioname" value="no"/>
-                <div>Όχι</div>
-            </label>
-        </div>
+    <input id="skr" class="text" placeholder="Π.χ. X2(B) R2(B) X1(A) W2(B) R1(A) X3(C)">
 
-        <!-- Page 2 -->
+    <button id="submit" onclick="submit()">Enter</button>
 
-        <p id="header-page2" class="hidden">Είναι σειριοποιήσιμο το χρονοπρόγραμμα;</p>
+    <!-- Page 1 -->
 
-        <form id="table" class="hidden">
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>1</th>
-                        <th>2</th> 
-                        <th>3</th>
-                        <th>4</th>
-                        <th>5</th>
-                        <th>6</th>
-                        <th>7</th>
-                        <th>8</th>
-                        <th>9</th>
-                        <th>10</th>
-                    </tr>
-                    <tr id="first-row">
-                        <td>T1</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>T2</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>T3</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>T4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-            </form>
+    <p id="header-page1" class="hidden">Είναι σειριοποιήσιμο το χρονοπρόγραμμα;</p>
 
-        <div id="page" class="hidden">
-            <button id="previous" onclick="previous()">Προηγούμενο</button>
-            <div class="current"></div>
-            <div></div>
-            <div></div>
-            <button id="next" onclick="next()">Επόμενο</button>
-        </div>
+    <div id="yesno" class="hidden">
+        <label class="labl">
+            <input type="radio" name="radioname" value="yes" />
+            <div>Ναι</div>
+        </label>
+        <label class="labl">
+            <input type="radio" name="radioname" value="no" />
+            <div>Όχι</div>
+        </label>
+    </div>
 
-    </body>
+    <!-- Page 2 -->
+
+    <p id="header-page2" class="hidden">Είναι σειριοποιήσιμο το χρονοπρόγραμμα;</p>
+
+    <form id="table" class="hidden">
+        <table>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+            </tr>
+            <tr id="first-row">
+                <td>T1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>T2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>T3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>T4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+
+    <div id="page" class="hidden">
+        <button id="previous" onclick="previous()">Προηγούμενο</button>
+        <div class="current"></div>
+        <div></div>
+        <div></div>
+        <button id="next" onclick="next()">Επόμενο</button>
+    </div>
+
+</body>
+
 </html>
