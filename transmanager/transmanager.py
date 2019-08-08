@@ -14,9 +14,9 @@ def index():
     return render_template('transmanager/index.html')
 
 
-@bp.route('/problemsolving')
-def problemsolving():
-    return render_template('transmanager/problem-solving.html')
+@bp.route('/aries')
+def aries():
+    return render_template('transmanager/aries.html')
 
 
 @bp.route('/concurrencycontrol')
