@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz2.css') }}">
+  <script type=text/javascript src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='js/quiz2.js') }}"></script>
+</head>
+
+<body>
+
+  <div id="nav">&#9776;
+    <form id="add-rows-form" onsubmit="addRow();return false;">
+      Insert rows<input type="text" name="add-rows">
+    </form>
+    <form id="rm-rows-form" onsubmit="removeRow();return false;">
+      Delete rows<input type="text" name="rm-rows">
+    </form>
+  </div>
+
+  <h1>QUIZ ΕΠΑΝΑΦΟΡΑ ΑΠΟ ΒΛΑΒΗ</h1>
+
+  <div id="hr"></div>
+
+  <button id="login">Είσοδος</button>
+
+  <p>Παρακαλώ εισάγεται τα στοιχεία</p>
+
+  <form id="timetable-form">
+    <table id="logfile-table">
+      <tr>
+        <th>LSN</th>
+        <th>PREV_LSN</th>
+        <th>TRANS_ID</th>
+        <th>TYPE</th>
+        <th>PAGE_ID</th>
+        <th>UNDO_NEXT_LSN </th>
+      </tr>
+      <tr id="row-1">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </form>
+
+  <button id="clear">Clear</button>
+  <button id="enter" onclick="getTimetable();return false;">Enter</button>
+
+</body>
+
+</html>
