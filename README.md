@@ -34,6 +34,11 @@ $env:FLASK_APP = "transmanager"
 $env:FLASK_ENV = "development"
 flask run
 ```
+### Contributions
+Windows users should run the following command before modifying any file and issuing a pull request
+```
+git config --global core.autocrlf true
+```
 
 ## Linux
 ### Create an environment
@@ -55,4 +60,9 @@ pip install Flask
 export FLASK_APP=transmanager
 export FLASK_ENV=development
 flask run
+```
+### Contributions
+Linux/Mac users should run the following command before modifying any file and issuing a pull request
+```
+git config --global core.autocrlf input
 ```
